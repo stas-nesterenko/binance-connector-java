@@ -4,6 +4,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>binance-derivatives-trading-usds-futures</artifactId>
+    <groupId>io.github.stas-nesterenko</groupId>
     <name>derivatives-trading-usds-futures</name>
     <version>2.0.0</version>
     <packaging>jar</packaging>
@@ -25,6 +26,25 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <gpgExecutable>gpg</gpgExecutable>
+                    <keyname>8756CE0F2C6CCC83D96A4C048795FF685F9040A9</keyname>
+                    <useAgent>true</useAgent>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -34,4 +54,11 @@
             <version>1.2.1</version>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/stas-nesterenko/derivatives-trading-usds-futures</url>
+        </repository>
+    </distributionManagement>
 </project>
