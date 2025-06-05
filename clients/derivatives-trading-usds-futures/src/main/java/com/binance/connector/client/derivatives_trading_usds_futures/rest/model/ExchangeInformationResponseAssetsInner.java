@@ -25,6 +25,7 @@ import com.google.gson.stream.JsonWriter;
 import jakarta.validation.constraints.*;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
@@ -54,7 +55,7 @@ public class ExchangeInformationResponseAssetsInner {
 
     @SerializedName(SERIALIZED_NAME_AUTO_ASSET_EXCHANGE)
     @jakarta.annotation.Nullable
-    private Long autoAssetExchange;
+    private BigDecimal autoAssetExchange;
 
     public ExchangeInformationResponseAssetsInner() {}
 
@@ -98,7 +99,7 @@ public class ExchangeInformationResponseAssetsInner {
     }
 
     public ExchangeInformationResponseAssetsInner autoAssetExchange(
-            @jakarta.annotation.Nullable Long autoAssetExchange) {
+            @jakarta.annotation.Nullable BigDecimal autoAssetExchange) {
         this.autoAssetExchange = autoAssetExchange;
         return this;
     }
@@ -109,11 +110,11 @@ public class ExchangeInformationResponseAssetsInner {
      * @return autoAssetExchange
      */
     @jakarta.annotation.Nullable
-    public Long getAutoAssetExchange() {
+    public BigDecimal getAutoAssetExchange() {
         return autoAssetExchange;
     }
 
-    public void setAutoAssetExchange(@jakarta.annotation.Nullable Long autoAssetExchange) {
+    public void setAutoAssetExchange(@jakarta.annotation.Nullable BigDecimal autoAssetExchange) {
         this.autoAssetExchange = autoAssetExchange;
     }
 
