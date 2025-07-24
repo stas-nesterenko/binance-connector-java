@@ -4069,8 +4069,9 @@ public class MarketDataApi {
     public ApiResponse<SymbolPriceTickerV2Response> symbolPriceTickerV2(String symbol)
             throws ApiException {
         okhttp3.Call localVarCall = symbolPriceTickerV2ValidateBeforeCall(symbol);
-        java.lang.reflect.Type localVarReturnType =
-                new TypeToken<SymbolPriceTickerV2Response>() {}.getType();
+        java.lang.reflect.Type localVarReturnType = symbol == null
+                ? new TypeToken<List<SymbolPriceTickerV2Response>>() {}.getType()
+                : new TypeToken<SymbolPriceTickerV2Response>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
