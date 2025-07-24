@@ -98,6 +98,7 @@ import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.SymbolOrderBookTickerResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.SymbolPriceTickerResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.SymbolPriceTickerV2Response;
+import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.SymbolPriceTickerV2Response2;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.TakerBuySellVolumeResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.TestOrderRequest;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.TestOrderResponse;
@@ -1495,7 +1496,7 @@ public class DerivativesTradingUsdsFuturesRestApi {
      *     href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Symbol-Price-Ticker-V2">Symbol
      *     Price Ticker V2 Documentation</a>
      */
-    public ApiResponse<SymbolPriceTickerV2Response> symbolPriceTickerV2(String symbol)
+    public ApiResponse<SymbolPriceTickerV2Response2> symbolPriceTickerV2(String symbol)
             throws ApiException {
         return marketDataApi.symbolPriceTickerV2(symbol);
     }

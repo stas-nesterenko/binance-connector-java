@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1 - 2025-06-10
+### Changed
+- Version update for deployment to GitHub packages
+
 ## 2.0.0 - 2025-06-02
 ### Removed (1)
 
