@@ -6,7 +6,7 @@
     <artifactId>binance-derivatives-trading-usds-futures</artifactId>
     <groupId>io.github.stas-nesterenko</groupId>
     <name>derivatives-trading-usds-futures</name>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <packaging>jar</packaging>
 
     <parent>
