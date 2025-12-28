@@ -40,6 +40,7 @@ import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.GetFuturesTransactionHistoryDownloadLinkByIdResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.GetIncomeHistoryResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NotionalAndLeverageBracketsResponse;
+import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NotionalAndLeverageBracketsResponse2;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.QueryUserRateLimitResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.SymbolConfigurationResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.ToggleBnbBurnOnFuturesTradeRequest;
@@ -632,7 +633,7 @@ public class AccountApiTest {
     public void notionalAndLeverageBracketsTest() throws ApiException, CryptoException {
         String symbol = "";
         Long recvWindow = 5000L;
-        ApiResponse<NotionalAndLeverageBracketsResponse> response =
+        ApiResponse<NotionalAndLeverageBracketsResponse2> response =
                 api.notionalAndLeverageBrackets(symbol, recvWindow);
 
         ArgumentCaptor<Call> callArgumentCaptor = ArgumentCaptor.forClass(Call.class);

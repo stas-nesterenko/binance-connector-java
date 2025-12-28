@@ -35,7 +35,7 @@ import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.GetFuturesTradeDownloadLinkByIdResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.GetFuturesTransactionHistoryDownloadLinkByIdResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.GetIncomeHistoryResponse;
-import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NotionalAndLeverageBracketsResponse;
+import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NotionalAndLeverageBracketsResponse2;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.QueryUserRateLimitResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.SymbolConfigurationResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.ToggleBnbBurnOnFuturesTradeRequest;
@@ -2663,12 +2663,12 @@ public class AccountApi {
      *     href="https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Notional-and-Leverage-Brackets">Notional
      *     and Leverage Brackets (USER_DATA) Documentation</a>
      */
-    public ApiResponse<NotionalAndLeverageBracketsResponse> notionalAndLeverageBrackets(
+    public ApiResponse<NotionalAndLeverageBracketsResponse2> notionalAndLeverageBrackets(
             String symbol, Long recvWindow) throws ApiException {
         okhttp3.Call localVarCall =
                 notionalAndLeverageBracketsValidateBeforeCall(symbol, recvWindow);
         java.lang.reflect.Type localVarReturnType =
-                new TypeToken<NotionalAndLeverageBracketsResponse>() {}.getType();
+                new TypeToken<NotionalAndLeverageBracketsResponse2>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
