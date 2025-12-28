@@ -73,6 +73,7 @@
                         </goals>
                         <configuration>
                             <signer>bc</signer>
+                            <skip>${gpg.skip}</skip>
                         </configuration>
                     </execution>
                 </executions>
@@ -416,5 +417,13 @@
         <jsr311-api-version>1.1.1</jsr311-api-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spotless.version>2.44.4</spotless.version>
+        <gpg.skip>true</gpg.skip>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/stas-nesterenko/binance-connector-java</url>
+        </repository>
+    </distributionManagement>
 </project>

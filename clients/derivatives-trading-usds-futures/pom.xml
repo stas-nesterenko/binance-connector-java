@@ -43,6 +43,7 @@
                     <gpgExecutable>gpg</gpgExecutable>
                     <keyname>8756CE0F2C6CCC83D96A4C048795FF685F9040A9</keyname>
                     <useAgent>true</useAgent>
+                    <skip>${gpg.skip}</skip>
                 </configuration>
             </plugin>
         </plugins>
