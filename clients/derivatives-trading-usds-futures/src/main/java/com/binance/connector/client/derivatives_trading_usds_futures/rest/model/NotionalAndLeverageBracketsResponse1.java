@@ -14,6 +14,7 @@ package com.binance.connector.client.derivatives_trading_usds_futures.rest.model
 
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.JSON;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.TypeAdapter;
@@ -122,17 +123,10 @@ public class NotionalAndLeverageBracketsResponse1
             }
         }
 
-        Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-        // check to see if the JSON string contains additional fields
-        for (Map.Entry<String, JsonElement> entry : entries) {
-            if (!NotionalAndLeverageBracketsResponse1.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException(
-                        String.format(
-                                "The field `%s` in the JSON string is not defined in the"
-                                    + " `NotionalAndLeverageBracketsResponse1` properties. JSON:"
-                                    + " %s",
-                                entry.getKey(), jsonElement.toString()));
-            }
+        JsonArray jsonArray = jsonElement.getAsJsonArray();
+        // validate the array and its items
+        for (int i = 0; i < jsonArray.size(); i++) {
+            NotionalAndLeverageBracketsResponse1Inner.validateJsonElement(jsonArray.get(i));
         }
     }
 

@@ -35,9 +35,11 @@ import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.GetFuturesTradeDownloadLinkByIdResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.GetFuturesTransactionHistoryDownloadLinkByIdResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.GetIncomeHistoryResponse;
+import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NotionalAndLeverageBracketsResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NotionalAndLeverageBracketsResponse2;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.QueryUserRateLimitResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.SymbolConfigurationResponse;
+import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.SymbolPriceTickerV2Response;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.ToggleBnbBurnOnFuturesTradeRequest;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.ToggleBnbBurnOnFuturesTradeResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.UserCommissionRateResponse;
@@ -2663,12 +2665,12 @@ public class AccountApi {
      *     href="https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Notional-and-Leverage-Brackets">Notional
      *     and Leverage Brackets (USER_DATA) Documentation</a>
      */
-    public ApiResponse<NotionalAndLeverageBracketsResponse2> notionalAndLeverageBrackets(
+    public ApiResponse<NotionalAndLeverageBracketsResponse> notionalAndLeverageBrackets(
             String symbol, Long recvWindow) throws ApiException {
         okhttp3.Call localVarCall =
                 notionalAndLeverageBracketsValidateBeforeCall(symbol, recvWindow);
         java.lang.reflect.Type localVarReturnType =
-                new TypeToken<NotionalAndLeverageBracketsResponse2>() {}.getType();
+                new TypeToken<NotionalAndLeverageBracketsResponse>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 

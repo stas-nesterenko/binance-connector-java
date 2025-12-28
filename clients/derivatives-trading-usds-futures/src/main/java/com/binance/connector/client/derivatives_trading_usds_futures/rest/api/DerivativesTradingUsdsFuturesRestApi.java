@@ -69,6 +69,7 @@ import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.MultiAssetsModeAssetIndexResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NewOrderRequest;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NewOrderResponse;
+import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NotionalAndLeverageBracketsResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.NotionalAndLeverageBracketsResponse2;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.OldTradesLookupResponse;
 import com.binance.connector.client.derivatives_trading_usds_futures.rest.model.OpenInterestResponse;
@@ -581,7 +582,7 @@ public class DerivativesTradingUsdsFuturesRestApi {
      *     href="https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Notional-and-Leverage-Brackets">Notional
      *     and Leverage Brackets (USER_DATA) Documentation</a>
      */
-    public ApiResponse<NotionalAndLeverageBracketsResponse2> notionalAndLeverageBrackets(
+    public ApiResponse<NotionalAndLeverageBracketsResponse> notionalAndLeverageBrackets(
             String symbol, Long recvWindow) throws ApiException {
         return accountApi.notionalAndLeverageBrackets(symbol, recvWindow);
     }
